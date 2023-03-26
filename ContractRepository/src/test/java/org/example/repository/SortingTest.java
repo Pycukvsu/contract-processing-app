@@ -17,9 +17,9 @@ import static org.junit.jupiter.api.Assertions.*;
 import java.time.LocalDate;
 
 /**
- * UnitTest сортировок
+ * UnitTest СЃРѕСЂС‚РёСЂРѕРІРѕРє
  *
- * @autor Хачетлов Руслан
+ * @autor РҐР°С‡РµС‚Р»РѕРІ Р СѓСЃР»Р°РЅ
  */
 class SortingTest {
 
