@@ -5,6 +5,11 @@ import org.example.repository.Storage;
 
 import java.util.Comparator;
 
+/**
+ * Сортировка Выбором
+ *
+ * @autor Хачетлов Руслан
+ */
 public class SelectionSort implements ISorted {
 
     @Override

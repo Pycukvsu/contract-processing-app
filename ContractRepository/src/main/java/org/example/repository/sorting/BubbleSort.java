@@ -5,6 +5,11 @@ import org.example.repository.Storage;
 
 import java.util.Comparator;
 
+/**
+ * Пузырьковая сортировка
+ *
+ * @autor Хачетлов Руслан
+ */
 public class BubbleSort implements ISorted {
     @Override
     public void sort(Storage storage, Comparator<Contract> comparator) {

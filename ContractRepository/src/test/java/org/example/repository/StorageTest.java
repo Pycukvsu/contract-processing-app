@@ -11,6 +11,11 @@ import java.util.function.Predicate;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * UnitTest хранилища
+ *
+ * @autor Хачетлов Руслан
+ */
 class StorageTest {
 
     @org.junit.jupiter.api.Test

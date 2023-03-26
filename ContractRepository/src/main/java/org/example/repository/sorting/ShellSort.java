@@ -5,6 +5,11 @@ import org.example.repository.Storage;
 
 import java.util.Comparator;
 
+/**
+ * Сортировка Шелла
+ *
+ * @autor Хачетлов Руслан
+ */
 public class ShellSort implements ISorted {
     @Override
     public void sort(Storage storage, Comparator<Contract> comparator) {

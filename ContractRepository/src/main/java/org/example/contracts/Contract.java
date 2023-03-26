@@ -60,6 +60,16 @@ public class Contract {
         this.id = id;
     }
 
+    public Contract(int id, int numberContract) {
+        this.id = id;
+        this.numberContract = numberContract;
+    }
+
+    public Contract(int id, LocalDate startDate) {
+        this.id = id;
+        this.startDate = startDate;
+    }
+
     public Contract(int id, LocalDate startDate, LocalDate endDate, int numberContract, Human contractOwner) {
         this.id = id;
         this.startDate = startDate;
@@ -70,6 +80,7 @@ public class Contract {
 
     public Contract() {
     }
+
 
     @Override
     public String toString() {
