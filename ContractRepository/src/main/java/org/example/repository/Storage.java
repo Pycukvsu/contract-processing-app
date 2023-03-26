@@ -92,19 +92,22 @@ public class Storage {
      *
      * @param id - айди котракта
      */
-    public void getContractById(int id) {
+    public Contract getContractById(int id) {
+        Contract contract = null;
         boolean flag = false;
         for (int i = 0; i < storage.length; i++) {
             if (storage[i] != null) {
                 if (storage[i].getId() == id) {
                     System.out.println(storage[i]);
                     flag = true;
+                    contract = storage[i];
                 }
             }
         }
         if (!flag) {
             System.out.println("Контракта с таким айди нет в хранилище");
         }
+        return contract;
     }
 
     /**
@@ -135,10 +138,10 @@ public class Storage {
             }
         }
 
-        System.out.println("Ðåçóëüòàòû ïîèñêà: ");
+        System.out.println("Результат поиска: ");
 
         if (contracts.isEmpty()) {
-            System.out.println("Íåóäàëîñü íè÷åãî íàéòè");
+            System.out.println("Ничего не было найдено");
         }else {
             Iterator<Contract> it = contracts.listIterator();
             Contract contract;

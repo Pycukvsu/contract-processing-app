@@ -9,7 +9,6 @@ import org.example.repository.sorting.BubbleSort;
 import org.example.repository.sorting.ISorted;
 import org.example.repository.sorting.SelectionSort;
 import org.example.repository.sorting.ShellSort;
-import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -22,7 +21,7 @@ public class Program {
         // write your code here
     }
 
-    public void addContract(Storage storage) {
+    public void addContractt(Storage storage) {
         Human human = new Human(69,
                 "Иванов Иван Иванович",
                 LocalDate.of(1980, 10, 10),
@@ -93,7 +92,6 @@ public class Program {
     /**
      * Тест удаления контрактов по айди
      */
-    @Test
     public void deletionTest() {
         Storage storage = new Storage();
 
@@ -124,7 +122,6 @@ public class Program {
     /**
      * Тест получения контрактов по айди
      */
-    @Test
     public void gettingByIdTest() {
         Storage storage = new Storage();
 
@@ -151,11 +148,10 @@ public class Program {
     /**
      * Тест всего функционала
      */
-    @Test
     public void testAllFunctionality() {
         Storage storage = new Storage();
 
-        addContract(storage);
+        addContractt(storage);
 
         storage.viewAllContracts();
 
@@ -169,7 +165,6 @@ public class Program {
     /**
      * Тест метода find()
      */
-    @Test
     public void TestFindMethod() {
         Storage storage = new Storage();
 
@@ -265,11 +260,10 @@ public class Program {
     /**
      * Тест сортировок
      */
-    @Test
     public void testSorting() {
         Storage storage = new Storage();
 
-        addContract(storage);
+        addContractt(storage);
 
         System.out.println("Первая сортировка: ");
         ISorted methodSort = new SelectionSort();
