@@ -25,6 +25,11 @@ public class ContractWiredInternet extends Contract {
         super(id, startDate, endDate, numberContract, contractOwner);
     }
 
+    public ContractWiredInternet(LocalDate startDate, LocalDate endDate, Human contractOwner, int connectSpeed) {
+        super(startDate, endDate, contractOwner);
+        this.connectSpeed = connectSpeed;
+    }
+
     public ContractWiredInternet(int id) {
         super(id);
     }

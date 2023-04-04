@@ -21,6 +21,11 @@ public class ContractDigitalTV extends Contract {
         this.channelPackage = channelPackage;
     }
 
+    public ContractDigitalTV(LocalDate startDate, LocalDate endDate, Human contractOwner, ChannelPackage channelPackage) {
+        super(startDate, endDate, contractOwner);
+        this.channelPackage = channelPackage;
+    }
+
     public ContractDigitalTV(int id) {
         super(id);
     }

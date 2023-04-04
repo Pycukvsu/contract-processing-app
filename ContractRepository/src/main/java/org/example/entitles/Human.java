@@ -61,6 +61,11 @@ public class Human {
         this.age = age;
     }
 
+    private void calcYears(LocalDate dateOfBirth){
+        LocalDate today = LocalDate.now();
+        setAge(today.minusYears(dateOfBirth.getYear()).getYear());
+    }
+
     public Human(int id, String FIO, LocalDate dateOfBirth, Gender gender, String passportData, int age) {
         this.id = id;
         this.FIO = FIO;
@@ -68,6 +73,15 @@ public class Human {
         this.gender = gender;
         this.passportData = passportData;
         this.age = age;
+    }
+
+    public Human(String FIO, Gender gender, LocalDate dateOfBirth, String passportData) {
+        this.id = (int) (Math.random() * 300);
+        this.FIO = FIO;
+        this.gender = gender;
+        this.dateOfBirth = dateOfBirth;
+        this.passportData = passportData;
+        calcYears(dateOfBirth);
     }
 
     @Override

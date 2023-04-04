@@ -78,6 +78,12 @@ public class Contract {
         this.contractOwner = contractOwner;
     }
 
+    public Contract(LocalDate startDate, LocalDate endDate, Human contractOwner) {
+        this.startDate = startDate;
+        this.endDate = endDate;
+        this.contractOwner = contractOwner;
+    }
+
     public Contract() {
     }
 

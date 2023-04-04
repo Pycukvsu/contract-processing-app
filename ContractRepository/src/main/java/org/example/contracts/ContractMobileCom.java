@@ -41,6 +41,13 @@ public class ContractMobileCom extends Contract {
         this.gigabytes = gigabytes;
     }
 
+    public ContractMobileCom(LocalDate startDate, LocalDate endDate, Human contractOwner, int minutes, int sms, int gigabytes) {
+        super(startDate, endDate, contractOwner);
+        this.minutes = minutes;
+        this.sms = sms;
+        this.gigabytes = gigabytes;
+    }
+
     public ContractMobileCom(int id, LocalDate startDate, LocalDate endDate, int numberContract, Human contractOwner) {
         super(id, startDate, endDate, numberContract, contractOwner);
     }

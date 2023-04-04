@@ -3,6 +3,7 @@ package org.example;
 import org.example.contracts.*;
 import org.example.entitles.Gender;
 import org.example.entitles.Human;
+import org.example.parser.ParseCSV;
 import org.example.repository.Storage;
 import org.example.repository.comparators.*;
 import org.example.repository.sorting.BubbleSort;
@@ -10,6 +11,8 @@ import org.example.repository.sorting.ISorted;
 import org.example.repository.sorting.SelectionSort;
 import org.example.repository.sorting.ShellSort;
 
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.function.Predicate;
@@ -19,6 +22,7 @@ public class Program {
 
     public static void main(String[] args) {
         // write your code here
+
     }
 
     public void addContractt(Storage storage) {
@@ -286,6 +290,14 @@ public class Program {
 
         System.out.println("Пятая сортировка: ");
         methodSort2.sort(storage, new HumanIdComparator());
+        storage.viewAllContracts();
+    }
+
+    public void testParser() throws FileNotFoundException {
+        Storage storage = new Storage();
+        FileReader fileReader = new FileReader("C:/Games/lab_2/ContractRepository/contracts.csv");
+        ParseCSV par = new ParseCSV();
+        par.parseFileCsv(storage, fileReader);
         storage.viewAllContracts();
     }
 }

@@ -53,6 +53,19 @@ public class Storage {
      * @param contract - контракт
      */
     public void addContract(Contract contract) {
+        if (contract.getId() == 0){
+            boolean flag = false;
+            while (!flag){
+                int id = (int) (Math.random() * 300);
+                if (isContractIdInStorage(id)){
+                    contract.setId(id);
+                    flag = true;
+                }
+            }
+        }
+        if (contract.getNumberContract() == 0){
+            contract.setNumberContract(numberOfContracts + 1);
+        }
         if (isContractIdInStorage(contract.getId())) {
             if (numberOfContracts == storage.length) {
                 expandStorage();
@@ -156,5 +169,9 @@ public class Storage {
 
     public Contract[] getStorage() {
         return storage;
+    }
+
+    public int getNumberOfContracts() {
+        return numberOfContracts;
     }
 }
